@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+
+    --height-card: 250px
+}
+.attribution { 
+    margin-top: 20px;
+    font-size: 13px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+.wrapper {
+    max-width: 1480px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: var(--VeryLightGray);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading p:first-child {
+    color: var(--VeryDarkBlue);
+    font-weight: 200;
+}
+
+.heading p:nth-child(2) {
+    color: var(--VeryDarkBlue);
+    font-weight: 600;
+}
+
+.desc {
+    max-width: 500px;
+    text-align: center;
+    color: var(--GrayishBlue);
+    margin-top: 20px;
+}
+
+.cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 135px 110px 35px 110px 135px;
+    grid-gap: 0 35px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: rgba(84, 157, 231, 0.2) 0px 8px 24px;
+    overflow: hidden;
+}
+
+.card-desc {
+    margin-top: 10px;
+    color: var(--GrayishBlue);
+}
+
+.card-img {
+    display: inline-flex;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.card.supervisor::after,
+.card.builder::after,
+.card.karma::after,
+.card.calculator::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+
+.card.supervisor::after {
+    background-color: var(--Cyan);
+}
+
+.card.builder::after {
+    background-color: var(--Red);
+}
+
+.card.karma::after {
+    background-color: var(--Orange);
+}
+
+.card.calculator::after {
+    background-color: var(--Blue);
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+    .cards {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 35px 35px;
+    }
+    .heading {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* Only PC */
+@media screen and (max-width: 1280px) {
+    .card.supervisor {
+        grid-row: 2/5;
+    }
+    .card.builder {
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+    .card.karma {
+        grid-row: 4/6;
+        grid-column: 2/3;
+    }
+    .card.calculator {
+        grid-row: 2/5;
+        grid-column: 3/4;
+    }
+}
