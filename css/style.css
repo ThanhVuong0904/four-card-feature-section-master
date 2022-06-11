@@ -137,11 +137,41 @@ body {
     .heading {
         font-size: 2.2rem;
     }
+    .card.supervisor {
+        grid-row: usnet;
+    }
+    .card.builder {
+        grid-row: usnet;
+        grid-column: usnet;
+    }
+    .card.karma {
+        grid-row: usnet;
+        grid-column: usnet;
+    }
+    .card.calculator {
+        grid-row: usnet;
+        grid-column: usnet;
+    }
 }
 
+.card.supervisor {
+        grid-row: 2/5;
+    }
+    .card.builder {
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+    .card.karma {
+        grid-row: 4/6;
+        grid-column: 2/3;
+    }
+    .card.calculator {
+        grid-row: 2/5;
+        grid-column: 3/4;
+    }
 
 /* Only PC */
-@media screen and (max-width: 1280px) {
+/* @media screen and (max-width: 1280px) {
     .card.supervisor {
         grid-row: 2/5;
     }
@@ -157,4 +187,4 @@ body {
         grid-row: 2/5;
         grid-column: 3/4;
     }
-}
+} */
